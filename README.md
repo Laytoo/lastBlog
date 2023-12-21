@@ -42,10 +42,10 @@ $ php artisan migrate --seed
 
 This will create new users that you can use to sign in :
 
-email: admin@gmail.com  to join as admin
+- email: admin@gmail.com  to join as admin
 - password: password
 
-email: user@gmail.com  to join as user
+- email: user@gmail.com  to join as user
 - password: password
 
 ## To Push Email Notification To The User
