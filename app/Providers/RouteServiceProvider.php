@@ -28,7 +28,8 @@ class RouteServiceProvider extends ServiceProvider
             return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
         });
 
-        $this->routes(function () {
+        $this->routes(function ()
+        {
             Route::middleware('api')
                 ->prefix('api')
                 ->group(base_path('routes/api.php'));
@@ -42,12 +43,11 @@ class RouteServiceProvider extends ServiceProvider
             ->as('user.')
             ->group(base_path('routes/user.php'));
 
-                Route::middleware(['web','auth','role:admin'])
-                ->prefix('admin')
-                ->as('admin.')
-                ->group(base_path('routes/admin.php'));
+            Route::middleware(['web','auth','role:admin'])
+            ->prefix('admin')
+            ->as('admin.')
+            ->group(base_path('routes/admin.php'));
 
-           
         });
     }
 }

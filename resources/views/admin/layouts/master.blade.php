@@ -61,6 +61,10 @@
                 <a class="nav-link" href="{{route('admin.send.email.view.all')}}" style="margin-left: 20px;">Send Email To Users</a>
               </li>
 
+              <li class="nav-item {{ setActive(['admin.sendEmailQueue']) }}">
+                <a class="nav-link" href="{{route('admin.sendEmailQueue')}}" style="margin-left: 20px;">Send Email By Queue</a>
+              </li>
+
           </ul>
         @endauth
 
